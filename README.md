@@ -77,7 +77,7 @@ npm run dev
 
 ## 🚀 Deploy na Vercel
 
-O app está publicado em:
+O app está publicado em: https://ponto-eletronico-nine.vercel.app/
 
 Para publicar o seu próprio:
 1. Suba o projeto no GitHub
