@@ -1,0 +1,16 @@
+.track {
+  height: 3px;
+  background: var(--surface2);
+  border-radius: 99px;
+  overflow: hidden;
+  margin: 1.25rem 0;
+}
+
+.fill {
+  height: 100%;
+  background: var(--green);
+  border-radius: 99px;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fill.over { background: var(--amber); }

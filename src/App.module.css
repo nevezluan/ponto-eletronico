@@ -1,0 +1,131 @@
+.app {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+  min-height: 100dvh;
+}
+
+/* ── Header ──────────────────────────────────────────────────────── */
+.header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: -0.04em;
+  color: var(--text);
+  line-height: 1;
+}
+
+.dot { color: var(--green); font-weight: 500; }
+
+.subtitle {
+  font-size: 0.75rem;
+  color: var(--text3);
+  margin-top: 4px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Month navigation ─────────────────────────────────────────────── */
+.monthNav {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 1.25rem;
+}
+
+.navBtn {
+  background: var(--surface);
+  border: 0.5px solid var(--border2);
+  border-radius: var(--radius-sm);
+  color: var(--text2);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all var(--transition);
+}
+.navBtn:hover { background: var(--surface2); color: var(--text); }
+
+.monthLabel {
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  color: var(--text);
+  flex: 1;
+}
+
+.year {
+  color: var(--text3);
+  font-weight: 400;
+}
+
+/* ── Metrics grid ────────────────────────────────────────────────── */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  margin-bottom: 0;
+}
+
+/* ── Progress label ──────────────────────────────────────────────── */
+.progressLabel {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--text3);
+  margin-bottom: 1.75rem;
+  margin-top: -4px;
+}
+
+/* ── Tabs ────────────────────────────────────────────────────────── */
+.tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 1.25rem;
+  border-bottom: 0.5px solid var(--border);
+  padding-bottom: 0;
+}
+
+.tab {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  background: none;
+  border: none;
+  color: var(--text3);
+  padding: 8px 14px 10px;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -0.5px;
+  transition: all var(--transition);
+  text-transform: lowercase;
+  letter-spacing: 0.01em;
+}
+
+.tab:hover { color: var(--text2); }
+
+.tabActive {
+  color: var(--green);
+  border-bottom-color: var(--green);
+  font-weight: 500;
+}
+
+/* ── Content ─────────────────────────────────────────────────────── */
+.content { animation: fadeIn 180ms ease; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Responsive ──────────────────────────────────────────────────── */
+@media (max-width: 480px) {
+  .app { padding: 1.5rem 1rem 3rem; }
+  .metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .title { font-size: 1.625rem; }
+}
